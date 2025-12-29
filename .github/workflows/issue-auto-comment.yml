@@ -20,14 +20,14 @@ jobs:
           script: |
             const user = context.payload.issue.user.login;
 
-            const comment = `
+            const comment = 
                 Thanks @${user}! 👋  
                 Your issue is important — maintainers will take a look soon.
 
                 **Before contributing, please note:**  
                 1️⃣ Make sure you check **#23 – Important Contributing Guidelines for OpenSource Compass**  
                 2️⃣ **PRs should be raised only after the issue is assigned**
-                    `;
+                    ;
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,
