@@ -291,44 +291,37 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
                 <p>Community-driven program for open-source beginners.</p>
                 <span class="badge">Beginner</span>
             </div>
-            <div class="card">
-                <h4>Outreachy</h4>
-                <p>Paid internship program for underrepresented contributors.</p>
-                <span class="badge">Intermediate</span>
-            </div>
-            <div class="card">
-                <h4>Linux Foundation Mentorship Program</h4>
-                <p>Industry-backed program for open-source development.</p>
-                <span class="badge">Intermediate</span>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <p>© 2025 OpenSource Compass • Built for the Open Source Community</p>
+<footer>
+        <p>&copy; <span id="current-year">2025</span> OpenSource Compass • Made with ❤️ for the Open Source Community</p>
     </footer>
 
-    <button id="scrollTopBtn" title="Go to top">↑</button>
-
     <script>
-        /* Theme Toggle & Scroll To Top Logic */
-        const themeToggle = document.getElementById("themeToggle");
-        if(themeToggle) {
-            themeToggle.addEventListener("click", () => {
-                document.body.classList.toggle("dark-mode");
-                themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
-            });
-        }
-
-        const scrollTopBtn = document.getElementById("scrollTopBtn");
-        window.addEventListener("scroll", () => {
-            scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
-        });
-
-        scrollTopBtn.addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
+        document.getElementById("current-year").textContent = new Date().getFullYear();
     </script>
-    <script src="../Js_scripts/main.js"></script>
-    <script src="../js/chatbot.js"></script>
+
+<button id="scrollTopBtn" title="Go to top">↑</button>
+
+<script>
+    /* Theme Toggle */
+    const themeToggle = document.getElementById("themeToggle");
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        themeToggle.textContent =
+            document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    });
+
+    /* Scroll To Top */
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.addEventListener("scroll", () => {
+        scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+
+    scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
+<script src="../Js_scripts/main.js"></script>
 </body>
+</html>
