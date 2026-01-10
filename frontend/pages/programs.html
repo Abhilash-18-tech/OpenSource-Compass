@@ -18,7 +18,7 @@
 <header>
     <h1 onclick="window.location.href='index.html'">OpenSource Compass</h1>
     <nav>
-        <a href="index.html">Home</a>
+        <a href="/index.html">Home</a>
         <a href="guides.html">Guides</a>
         <a href="programs.html">Programs</a>
         <a href="Resources.html">Resources</a>
@@ -64,6 +64,26 @@
         <div id="modalBody"></div>
     </div>
 </div>
+
+<!-- Subscription Section -->
+<section class="subscription-section">
+    <div class="subscription-content">
+        <h3>Stay Informed</h3>
+        <p>Get notified about upcoming open-source program applications and important deadlines.</p>
+
+        <form id="subscribeForm" class="subscribe-form">
+            <input 
+                type="email" 
+                id="subscriberEmail" 
+                placeholder="Enter your email address" 
+                required
+            >
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+
+        <p id="subscriptionMessage" class="subscription-message"></p>
+    </div>
+</section>
 
 <!-- Footer -->
 <footer>
