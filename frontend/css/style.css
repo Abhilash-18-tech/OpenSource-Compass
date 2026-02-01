@@ -849,6 +849,11 @@ footer.site-footer::after {
   animation: footerGlow 9s ease-in-out infinite;
 }
 
+footer.site-footer ul {
+  list-style: none;
+  margin-left: 5px;
+}
+
 @keyframes footerGlow {
   0%,
   100% {
